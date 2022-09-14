@@ -6,7 +6,7 @@ import Projects from "./components/Projects";
 import Stack from "./components/Stack";
 function App() {
   return (
-    <ThemeProvider attribute="class">
+    // <ThemeProvider attribute="class">
       <div className="p-6 lg:p-20 max-w-4xl m-auto w-full">
         <Hero />
         <div className="p-0 space-y-10">
@@ -15,7 +15,7 @@ function App() {
           <Contact />
         </div>
       </div>
-    </ThemeProvider>
+    // </ThemeProvider>
   );
 }
 
