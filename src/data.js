@@ -1,12 +1,12 @@
 export const meta = {
-  title: "LeBron James - Web Developer and Designer",
+  title: "Abue Ammar",
   description:
     "Hey, I'm. I'm a web developer and designer building things people love.",
 };
 
 export const hero = {
-  title: "Hey there! I'm LeBron",
-  desc: "I'm a web developer and designer building things people love.",
+  title: "Hey there! I'm Abue Ammar.",
+  desc: "I'm a software engineer with a goal set to become a software architect. I am willing to be a part of a software company where I can apply my learnings to  deliver satisfactory tasks  for the company and learn new technologies.",
 };
 
 export const projects = {
@@ -49,10 +49,15 @@ export const stack = {
   ],
 };
 
+export const resume = {
+  title: "My Resume",
+  link: "https://docs.google.com/document/d/e/2PACX-1vT5pZaLgx9V7ACfp6kBc_plUf7x-wkaUredcQ0n6V5OeYD0mhYdrwS7ktj2B-e-T44stbC-iHhaNmE7/pub",
+};
+
 export const contact = {
   title: "Contact Me",
-  email: "lebron@gmail.com",
-  github: "theking-lbj",
-  dribbble: "theking-lbj",
-  linkedin: "theking-lbj",
+  email: "iabueammar@gmail.com",
+  github: "abdarker",
+  dribbble: "#",
+  linkedin: "abdarker",
 };

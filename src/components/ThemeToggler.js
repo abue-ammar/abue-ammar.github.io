@@ -44,12 +44,12 @@ export default function ThemeToggler() {
     <button
       ref={themeToggleBtn}
       type="button"
-      className="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none rounded-full text-sm p-2.5"
+      className="text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-800 focus:outline-none rounded-lg text-sm p-2.5"
       onClick={handleThemeToggle}
     >
       <svg
         ref={themeToggleDarkIcon}
-        className="hidden w-8 h-8"
+        className="hidden w-5 h-5"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +58,7 @@ export default function ThemeToggler() {
       </svg>
       <svg
         ref={themeToggleLightIcon}
-        className="hidden w-8 h-8"
+        className="hidden w-5 h-5"
         fill="currentColor"
         viewBox="0 0 20 20"
         xmlns="http://www.w3.org/2000/svg"
