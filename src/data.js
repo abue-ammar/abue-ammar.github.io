@@ -1,7 +1,7 @@
 export const meta = {
   title: "Abue Ammar",
   description:
-    "Hey, I'm. I'm a web developer and designer building things people love.",
+    "I'm a software engineer with a goal set to become a software architect.",
 };
 
 export const hero = {
@@ -17,13 +17,25 @@ export const projects = {
       title: "Lakers Official",
       description: "Home to the Los-Angeles Lakers",
       link: "https://lakers.com",
-      github: "",
+      github: "theking-lbj/cool-app",
     },
     {
       title: "Cool App",
       description: "A cool app!",
       link: "https://lebronscoolapp.com",
       github: "theking-lbj/cool-app",
+    },
+    {
+      title: "Another app",
+      description: "Another app!",
+      link: "https://anotherlebronapp.com",
+      github: "theking-lbj/another-app",
+    },
+    {
+      title: "Another app",
+      description: "Another app!",
+      link: "https://anotherlebronapp.com",
+      github: "theking-lbj/another-app",
     },
     {
       title: "Another app",
@@ -56,8 +68,8 @@ export const resume = {
 
 export const contact = {
   title: "Contact Me",
-  email: "iabueammar@gmail.com",
   github: "abdarker",
-  dribbble: "#",
+  mail: "iabueammar@gmail.com",
   linkedin: "abdarker",
+  phone: "+8801765884168",
 };

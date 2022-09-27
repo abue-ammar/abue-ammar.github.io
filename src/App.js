@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="p-6 lg:p-20 max-w-4xl m-auto w-full">
       <Hero />
-      <div className="p-0 mt-10 space-y-10">
+      <div className="p-0 mt-10 space-y-8">
         <Projects />
         <Stack />
         <Resume />
