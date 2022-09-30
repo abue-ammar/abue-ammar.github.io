@@ -64,6 +64,8 @@ export const stack = {
 export const resume = {
   title: "My Resume",
   link: "https://docs.google.com/document/d/e/2PACX-1vT5pZaLgx9V7ACfp6kBc_plUf7x-wkaUredcQ0n6V5OeYD0mhYdrwS7ktj2B-e-T44stbC-iHhaNmE7/pub",
+  download:
+    "https://github.com/abdarker/resume/raw/main/Abue%20Ammar's%20Resume.pdf",
 };
 
 export const contact = {
