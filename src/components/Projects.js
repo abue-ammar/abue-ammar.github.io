@@ -17,7 +17,7 @@ export default function Projects() {
               className="p-6 border border-lightText rounded-xl mb-4"
             >
               <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <p className="text-justify">{item.description}</p>
               <div className="flex items-center flex-wrap -m-3 pt-5">
                 {item.link && (
                   <a

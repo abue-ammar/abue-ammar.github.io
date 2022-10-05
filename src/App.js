@@ -9,11 +9,13 @@ function App() {
   return (
     <div className="p-6 lg:pt-20 lg:pl-20 lg:pr-20 max-w-4xl m-auto w-full">
       <Hero />
-      <div className="p-0 mt-10 space-y-8">
+      <div className="p-0 mt-10 mb-5 space-y-8">
         <Projects />
         <Stack />
         <Resume />
         <Contact />
+      </div>
+      <div>
         <Footer />
       </div>
     </div>
