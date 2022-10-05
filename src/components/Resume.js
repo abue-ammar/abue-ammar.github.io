@@ -14,7 +14,7 @@ const Resume = () => {
           <a
             href={resume.download}
             rel="noreferrer"
-            className="tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black text-[12.75px] dark:border-white border border-black dark:text-white inline-flex items-center text-sm py-0.5  px-2  m-1.5 "
+            className=" tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black text-[12.75px] dark:border-white border border-black dark:text-white inline-flex items-center text-sm py-0.5  px-2.5  m-1.5 "
           >
             Download
             <svg
@@ -40,7 +40,7 @@ const Resume = () => {
             href={resume.link}
             target="_blank"
             rel="noreferrer"
-            className="tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black border text-[12.75px]   border-black dark:text-white dark:border-white text-black inline-flex items-center text-sm m-1.5 py-0.5  px-2 "
+            className=" tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black border text-[12.75px]   border-black dark:text-white dark:border-white text-black inline-flex items-center text-sm m-1.5 py-0.5  px-2.5 "
           >
             Preview
             <svg
