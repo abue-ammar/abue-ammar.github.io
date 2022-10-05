@@ -1,10 +1,10 @@
 {
   "short_name": "Abue Ammar",
-  "name": "Portfolio",
+  "name": "Abue Ammar's Portfolio",
   "icons": [
     {
       "src": "maskable.png",
-      "sizes": "152x152",
+      "sizes": "180x180",
       "type": "image/x-icon",
       "purpose": "any maskable"
     },
