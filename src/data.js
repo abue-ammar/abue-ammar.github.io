@@ -17,7 +17,7 @@ export const projects = {
       title: "Text Analyzer",
       description:
         "This is a text utility progressive web app to manage yours texts into uppercase, lowercase, title case, removing extra whitespace etc.",
-      link: "https://text-analyzer-pwa.netlify.app/",
+      link: "https://cutt.ly/text-analyzer",
       github: "abdarker/text-analyzer",
     },
     {
