@@ -55,8 +55,10 @@ export const stack = {
     "Bootstrap",
     "Ant Design",
     "Material UI",
-    "Styled Components",
+
     "TailwindCSS",
+    "Styled Components",
+
     "MongoDB",
     "MySQL",
     "Firebase",
