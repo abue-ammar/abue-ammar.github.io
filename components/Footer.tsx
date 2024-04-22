@@ -1,6 +1,8 @@
 import React from "react";
 
-const Footer = () => {
+interface FooterProps {}
+
+const Footer: React.FC<FooterProps> = (props) => {
   return (
     <div>
       <p className="flex text-black dark:text-white items-center justify-center ">
