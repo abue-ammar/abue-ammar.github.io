@@ -28,11 +28,10 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                 <div className="flex-1">
                   <div className="text-pretty">
                     <p className="font-semibold ">{item?.title}</p>
-                    {/* <p className="text-sm">{item.description}</p> */}
-                    {item.link && (
+                    {item?.link && (
                       <a
                         className="text-sm hover:underline flex items-center gap-1"
-                        href={`$https://{item?.link}`}
+                        href={`https://${item?.link}`}
                         target="_blank"
                       >
                         <svg
@@ -52,7 +51,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                       </a>
                     )}
 
-                    {item.github && (
+                    {item?.github && (
                       <a
                         target="_blank"
                         className="text-sm hover:underline flex items-center gap-1"
@@ -76,7 +75,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
               </div>
               <p className="text-sm">{item.description}</p>
               <p className="text-sm text-neutral-400 italic">
-                Techs: {item.techs}
+                Techs: {item?.techs}
               </p>
             </div>
           );
