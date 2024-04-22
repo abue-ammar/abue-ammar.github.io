@@ -11,11 +11,11 @@ const Experience: React.FC<ExperienceProps> = (props) => {
       <div className="flex flex-col gap-4">
         {experience?.companies?.map((company, i) => (
           <div key={i} className="">
-            <p className="font-medium lightText">{company?.name}</p>
+            <p className="font-medium lightText leading-5">{company?.name}</p>
             <p className="text-sm text-neutral-400 italic">
               {company?.position}, {company?.duration}
             </p>
-            <ul className="px-8 marker:text-neutral-500 text-sm lightText">
+            <ul className="px-8 marker:text-neutral-500 lightText">
               {company?.tasks?.map((task, i) => (
                 <li key={i}>{task}</li>
               ))}

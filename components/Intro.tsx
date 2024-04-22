@@ -13,7 +13,7 @@ const Intro: React.FC<IntroProps> = (props) => {
           <Image
             src="/profile.png"
             layout="fill"
-            objectFit="contain"
+            className="object-contain"
             alt="Abue Ammar"
           />
         </div>

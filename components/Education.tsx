@@ -11,7 +11,9 @@ const Education: React.FC<EducationProps> = (props) => {
       <div className="flex flex-col gap-2">
         {education?.educations?.map((education, i) => (
           <div key={i} className="">
-            <p className="font-medium lightText">{education?.institution}</p>
+            <p className="font-medium lightText  leading-5">
+              {education?.institution}
+            </p>
             <p className="text-sm text-neutral-400 italic">
               {education.degree}, {education?.duration}
             </p>

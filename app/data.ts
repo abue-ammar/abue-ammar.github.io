@@ -7,23 +7,56 @@ export const projects = {
   desc: "Here are some of my favorite projects that I've worked on.",
   projects: [
     {
-      title: "Text Analyzer",
-      description:
-        "This is a text utility progressive web app to manage yours texts into uppercase, lowercase, title case, removing extra whitespace etc.",
-      link: "https://text-analyzer-pwa.netlify.app/",
-      github: "abdarker/text-analyzer",
+      title: "US-Bangla Airlines",
+      description: "US-Bangla Airlines corporate site.",
+      link: "usbair.com",
+      github: "",
+      image: "/usbangla.png",
+      techs: "NextJS, Tailwind CSS, Headless UI, Framer, Motion",
+    },
+    {
+      title: "US-Bangla Airlines CMS",
+      description: "CMS for US-Bangla Airlines corporate site.",
+      link: "usbair.com",
+      github: "",
+      image: "/usbangla.png",
+      techs: "NextJS, Tailwind CSS, Ant Design, Redux Toolkit",
+    },
+    {
+      title: "DhakaMail News Portal",
+      description: "News portal site for DhakaMail.",
+      link: "dhakamail.com",
+      github: "",
       image:
-        "https://cdn.usbair.com/website/public/images/home_page/homepage_logo.png.svg",
-      techs: [],
+        "https://yt3.googleusercontent.com/K69EiwDDoC7V7uEctSJf41hhYaMy2GEZyDUtesDdJga6mfRtkZHq5UTgnvf4QXNdAlwyvTOW=s176-c-k-c0x00ffffff-no-rj",
+      techs: "NextJS, Tailwind CSS, AMP, Google Ads, Google Analytics",
+    },
+    {
+      title: "DhakaMail News Portal CMS",
+      description: "CMS for DhakaMail news portal.",
+      link: "dhakamail.com",
+      github: "",
+      image:
+        "https://yt3.googleusercontent.com/K69EiwDDoC7V7uEctSJf41hhYaMy2GEZyDUtesDdJga6mfRtkZHq5UTgnvf4QXNdAlwyvTOW=s176-c-k-c0x00ffffff-no-rj",
+      techs: "ReactJS, React Router, Ant Design, Tailwind CSS, Redux Toolkit",
+    },
+    {
+      title: "Image Compressor",
+      description:
+        "Free and Open Source Image Compressor Optimizes images locally.",
+      link: "image-compressor.github.io",
+      github: "abdarker/image-compressor",
+      image: "https://image-compressor.github.io/logo180.png",
+      techs: "ReactJS, Tailwind CSS, Vite",
     },
     {
       title: "Text Analyzer",
       description:
-        "This is a text utility progressive web app to manage yours texts into uppercase, lowercase, title case, removing extra whitespace etc.",
-      link: "https://text-analyzer-pwa.netlify.app/",
+        "Utility for texts. (eg. Text case convert, Remove whitespace etc.)",
+      link: "text-analyzer-pwa.netlify.app",
       github: "abdarker/text-analyzer",
-      image:
-        "https://cdn.usbair.com/website/public/images/home_page/homepage_logo.png.svg",
+      image: "https://text-analyzer-pwa.netlify.app/apple-touch-icon.png",
+      techs: "ReactJS, Tailwind CSS, Vite",
     },
   ],
 };
