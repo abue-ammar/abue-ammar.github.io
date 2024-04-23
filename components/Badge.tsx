@@ -1,6 +1,6 @@
 export function Badge(props: any) {
   return (
-    <a
+    <span
       {...props}
       rel="noreferrer"
       target="_blank"

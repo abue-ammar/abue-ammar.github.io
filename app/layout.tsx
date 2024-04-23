@@ -1,11 +1,16 @@
 import { GeistSans } from "geist/font/sans";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import Providers from "./Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  manifest: "/manifest.json",
   title: "Abue Ammar",
   description: "Abue Ammar's Portfolio.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#FFFFFF",
 };
 
 export default function RootLayout({
