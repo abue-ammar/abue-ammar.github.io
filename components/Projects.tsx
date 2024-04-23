@@ -12,17 +12,17 @@ const Projects: React.FC<ProjectsProps> = (props) => {
       <Section title={projects.title} />
       <p className="">{projects.desc}</p>
       <div className="mt-4 flex flex-col gap-4">
-        {projects.projects.map((item, index) => {
+        {projects?.projects?.map((item, index) => {
           return (
             <div
               key={index}
-              className="p-2 md:p-4 border border-neutral-200 rounded-lg"
+              className="p-2 md:p-4 !border-neutral-200 dark:!border-neutral-200 border  rounded-lg"
             >
               <div className="flex items-start gap-3">
                 <img
                   src={item?.image}
                   alt="logo"
-                  className=" size-14 md:size-16"
+                  className=" size-14 md:size-16 rounded-lg"
                   style={{ transform: "scale(1.1)" }}
                 />
                 <div className="flex-1">
@@ -30,7 +30,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                     <p className="font-semibold ">{item?.title}</p>
                     {item?.link && (
                       <a
-                        className="text-sm hover:underline flex items-center gap-1"
+                        className="text-sm hover:underline flex items-center gap-1 dark:text-neutral-400"
                         href={`https://${item?.link}`}
                         target="_blank"
                       >
@@ -54,7 +54,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
                     {item?.github && (
                       <a
                         target="_blank"
-                        className="text-sm hover:underline flex items-center gap-1"
+                        className="text-sm hover:underline flex items-center gap-1 dark:text-neutral-400"
                         href={`https://github.com/${item?.github}`}
                       >
                         <svg viewBox="0 0 128 128" className="size-[14px]">
@@ -85,7 +85,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         <a
           href="https://github.com/abdarker?tab=repositories"
           target="_blank"
-          className="underline flex items-center gap-.5"
+          className="underline flex items-center gap-.5 dark:text-neutral-400"
         >
           More projects
           <svg
@@ -96,7 +96,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="size-4"
+            className="size-4 animate-bounce"
           >
             <path d="M7 7h10v10" />
             <path d="M7 17 17 7" />
