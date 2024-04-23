@@ -19,7 +19,9 @@ const Intro: React.FC<IntroProps> = (props) => {
             alt="Abue Ammar"
           />
         </div>
-        <ToggleTheme />
+        <div className="mb-4 mr-4">
+          <ToggleTheme />
+        </div>
       </div>
       <h1 className="my-4">{intro.title}</h1>
       <p className="text-justify">{intro.desc}</p>
