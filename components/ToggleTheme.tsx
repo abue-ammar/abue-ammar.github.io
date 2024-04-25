@@ -20,7 +20,7 @@ const ToggleTheme: React.FC<ToggleThemeProps> = (props) => {
       onPointerLeaveCapture={""}
       className="text-2xl"
       onToggle={() => setTheme(theme === "dark" ? "light" : "dark")}
-      toggled={theme === "dark"}
+      toggled={theme === "dark" ? false : true}
     />
   );
 };
