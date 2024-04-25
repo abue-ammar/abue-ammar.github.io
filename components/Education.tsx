@@ -14,7 +14,7 @@ const Education: React.FC<EducationProps> = (props) => {
             <p className="font-medium lightText  leading-5">
               {education?.institution}
             </p>
-            <p className="text-sm text-neutral-400 italic">
+            <p className="text-sm text-neutral-400">
               {education.degree}, {education?.duration}
             </p>
             <p className="text-sm lightText">{education?.GPA}</p>

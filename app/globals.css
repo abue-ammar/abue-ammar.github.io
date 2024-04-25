@@ -35,22 +35,8 @@ a {
   @apply text-lightText;
 }
 
-* {
-  box-sizing: border-box;
-}
 ul {
   @apply list-disc;
 }
 
-.landingSectionTitle::before {
-  content: "";
-  position: absolute;
-  left: 110%;
-  right: 0px;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 1px;
-  width: 100vw;
-  @apply bg-neutral-200 dark:!bg-white;
-}
 

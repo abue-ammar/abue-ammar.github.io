@@ -6,10 +6,9 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = (props) => {
   return (
-    <div className="overflow-x-hidden w-full mb-2">
-      <h2 className="landingSectionTitle max-w-max mx-0 text-left relative md:w-max">
-        {props.title}
-      </h2>
+    <div className="flex items-center gap-2">
+      <h2>{props.title}</h2>
+      <div className="h-[1px] bg-neutral-200 dark:bg-neutral-700 flex-1"></div>
     </div>
   );
 };

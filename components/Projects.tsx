@@ -16,9 +16,9 @@ const Projects: React.FC<ProjectsProps> = (props) => {
           return (
             <div
               key={index}
-              className="p-2 md:p-4 !border-neutral-200 dark:!border-neutral-200 border  rounded-lg"
+              className="p-2 md:p-4 border border-neutral-200 dark:border-neutral-700  rounded-lg"
             >
-              <div className="flex items-start gap-3">
+              <div className="flex items-start gap-3 mb-1.5">
                 <img
                   src={item?.image}
                   alt="logo"
@@ -90,7 +90,7 @@ const Projects: React.FC<ProjectsProps> = (props) => {
         <a
           href="https://github.com/abdarker?tab=repositories"
           target="_blank"
-          className="underline flex items-center gap-.5 dark:text-neutral-400"
+          className="underline flex items-center gap-.5 dark:text-white"
         >
           More projects
           <svg

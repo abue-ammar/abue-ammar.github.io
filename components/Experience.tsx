@@ -12,7 +12,7 @@ const Experience: React.FC<ExperienceProps> = (props) => {
         {experience?.companies?.map((company, i) => (
           <div key={i} className="">
             <p className="font-medium lightText leading-5">{company?.name}</p>
-            <p className="text-sm text-neutral-400 italic">
+            <p className="text-sm text-neutral-400 ">
               {company?.position}, {company?.duration}
             </p>
             <ul className="px-8 marker:text-neutral-500 lightText">
