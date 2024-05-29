@@ -69,21 +69,18 @@ export const education = {
       degree: "BSc in Computer Science & Engineering",
       duration: "Jun 2016 - Dec 2021",
       location: "Dhaka, Bangladesh",
-      GPA: "CGPA: 3.10/4.0",
     },
     {
       institution: "BOGURA CANTONMENT PUBLIC SCHOOL AND COLLEGE",
       degree: "HSC - Science",
       duration: "Jun 2013 - Feb 2015",
       location: "Bogura, Bangladesh",
-      GPA: "GPA: 4.92/5.0",
     },
     {
       institution: "NAOGAON ZILLA SCHOOL",
       degree: "SSC - Science",
       duration: "Jan 2005 - Jan 2013",
       location: "Naogaon, Bangladesh",
-      GPA: "GPA: 5.0/5.0",
     },
   ],
 };
