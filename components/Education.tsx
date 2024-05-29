@@ -17,7 +17,6 @@ const Education: React.FC<EducationProps> = (props) => {
             <p className="text-sm text-neutral-400">
               {education.degree}, {education?.duration}
             </p>
-            <p className="text-sm lightText">{education?.GPA}</p>
           </div>
         ))}
       </div>
