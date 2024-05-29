@@ -193,7 +193,7 @@ export const experience = {
   title: "Experience",
   companies: [
     {
-      name: "TECHNONEXT LTD.",
+      name: "TECHNONEXT SOFTWARE LIMITED",
       position: "Jr. Software Engineer",
       duration: "Dec 2022 – Present",
       tasks: [
