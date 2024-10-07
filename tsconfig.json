@@ -21,6 +21,14 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "createUser.mjs", "scripts/createUser.mjs"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "createUser.mjs",
+    "scripts/createUser.mjs",
+    "next-auth.d.ts"
+  ],
   "exclude": ["node_modules"]
 }
