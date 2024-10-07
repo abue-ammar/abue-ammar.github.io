@@ -1,9 +1,13 @@
 // app/api/experience/route.ts
 import { NextResponse } from "next/server";
+import { verifyToken } from "../lib/jwt";
 import dbConnect from "../lib/mongodb";
 import Experience from "../models/Experience";
 
-// Get all experience entries
+// Specify the Node.js runtime
+export const runtime = "nodejs";
+
+// Get all experience entries (public)
 export async function GET() {
   await dbConnect();
   try {
@@ -17,11 +21,22 @@ export async function GET() {
   }
 }
 
-// Create a new experience entry
+// Create a new experience entry (protected)
 export async function POST(req: Request) {
   await dbConnect();
-  const { name, position, duration, tasks } = await req.json();
 
+  // JWT protection
+  const token = req.headers.get("Authorization")?.split(" ")[1];
+  const decoded = token ? verifyToken(token) : null;
+
+  if (!decoded) {
+    return NextResponse.json(
+      { success: false, message: "Unauthorized" },
+      { status: 401 }
+    );
+  }
+
+  const { name, position, duration, tasks } = await req.json();
   try {
     const newExperience = await Experience.create({
       name,

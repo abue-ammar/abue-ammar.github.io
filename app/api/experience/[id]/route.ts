@@ -1,14 +1,20 @@
 // app/api/experience/[id]/route.ts
 import { NextResponse } from "next/server";
 import dbConnect from "../../lib/mongodb";
+import { verifyToken } from "../../lib/jwt";
 import Experience from "../../models/Experience";
 
-// Update an experience entry by ID
-export async function PUT(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
+// Update an experience entry by ID (protected)
+export async function PUT(req: Request, { params }: { params: { id: string } }) {
   await dbConnect();
+
+  // JWT protection
+  const token = req.headers.get("Authorization")?.split(" ")[1];
+  const decoded = token ? verifyToken(token) : null;
+  if (!decoded) {
+    return NextResponse.json({ success: false, message: "Unauthorized" }, { status: 401 });
+  }
+
   const { id } = params;
   const { name, position, duration, tasks } = await req.json();
 
@@ -18,12 +24,8 @@ export async function PUT(
       { name, position, duration, tasks },
       { new: true }
     );
-
     if (!updatedExperience) {
-      return NextResponse.json({
-        success: false,
-        message: "Experience entry not found",
-      });
+      return NextResponse.json({ success: false, message: "Experience entry not found" });
     }
 
     return NextResponse.json({ success: true, data: updatedExperience });
@@ -35,28 +37,27 @@ export async function PUT(
   }
 }
 
-// Delete an experience entry by ID
-export async function DELETE(
-  req: Request,
-  { params }: { params: { id: string } }
-) {
+// Delete an experience entry by ID (protected)
+export async function DELETE(req: Request, { params }: { params: { id: string } }) {
   await dbConnect();
+
+  // JWT protection
+  const token = req.headers.get("Authorization")?.split(" ")[1];
+  const decoded = token ? verifyToken(token) : null;
+  if (!decoded) {
+    return NextResponse.json({ success: false, message: "Unauthorized" }, { status: 401 });
+  }
+
   const { id } = params;
 
   try {
     const deletedExperience = await Experience.findByIdAndDelete(id);
 
     if (!deletedExperience) {
-      return NextResponse.json({
-        success: false,
-        message: "Experience entry not found",
-      });
+      return NextResponse.json({ success: false, message: "Experience entry not found" });
     }
 
-    return NextResponse.json({
-      success: true,
-      message: "Experience entry deleted successfully",
-    });
+    return NextResponse.json({ success: true, message: "Experience entry deleted successfully" });
   } catch (error: unknown) {
     if (error instanceof Error) {
       return NextResponse.json({ success: false, error: error.message });

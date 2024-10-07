@@ -1,9 +1,10 @@
 // app/api/projects/route.ts
 import { NextResponse } from "next/server";
 import dbConnect from "../lib/mongodb";
+import { verifyToken } from "../lib/jwt";
 import Project from "../models/Projects";
 
-// Get all projects
+// Get all projects (public)
 export async function GET() {
   await dbConnect();
   try {
@@ -17,9 +18,17 @@ export async function GET() {
   }
 }
 
-// Create a new project
+// Create a new project (protected)
 export async function POST(req: Request) {
   await dbConnect();
+
+  // JWT protection
+  const token = req.headers.get("Authorization")?.split(" ")[1];
+  const decoded = token ? verifyToken(token) : null;
+  if (!decoded) {
+    return NextResponse.json({ success: false, message: "Unauthorized" }, { status: 401 });
+  }
+
   const { title, description, link, github, image, techs } = await req.json();
   try {
     const newProject = await Project.create({ title, description, link, github, image, techs });

@@ -2,8 +2,9 @@
 import { NextResponse } from "next/server";
 import dbConnect from "../lib/mongodb";
 import Skill from "../models/Skill";
+import { verifyToken } from "../lib/jwt";
 
-// Get all skills
+// Get all skills (public)
 export async function GET() {
   await dbConnect();
   try {
@@ -17,11 +18,18 @@ export async function GET() {
   }
 }
 
-// Create a new skill
+// Create a new skill (protected)
 export async function POST(req: Request) {
   await dbConnect();
-  const { name, url } = await req.json();
 
+  // JWT protection
+  const token = req.headers.get("Authorization")?.split(" ")[1];
+  const decoded = token ? verifyToken(token) : null;
+  if (!decoded) {
+    return NextResponse.json({ success: false, message: "Unauthorized" }, { status: 401 });
+  }
+
+  const { name, url } = await req.json();
   try {
     const newSkill = await Skill.create({ name, url });
     return NextResponse.json({ success: true, data: newSkill });
