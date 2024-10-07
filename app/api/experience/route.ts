@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 import dbConnect from "../lib/mongodb";
 import Experience from "../models/Experience";
 
-// Get all experiences
+// Get all experience entries
 export async function GET() {
   await dbConnect();
   try {
@@ -17,10 +17,11 @@ export async function GET() {
   }
 }
 
-// Create a new experience
+// Create a new experience entry
 export async function POST(req: Request) {
   await dbConnect();
   const { name, position, duration, tasks } = await req.json();
+
   try {
     const newExperience = await Experience.create({
       name,

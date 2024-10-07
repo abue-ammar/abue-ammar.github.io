@@ -1,5 +1,5 @@
 // app/api/models/Experience.ts
-import { Schema, model, models } from "mongoose";
+import mongoose, { Schema, model, models } from "mongoose";
 
 export interface IExperience {
   name: string;
@@ -12,9 +12,8 @@ const experienceSchema = new Schema<IExperience>({
   name: { type: String, required: true },
   position: { type: String, required: true },
   duration: { type: String, required: true },
-  tasks: [{ type: String }],
+  tasks: [{ type: String, required: true }],
 });
 
-const Experience =
-  models.Experience || model<IExperience>("Experience", experienceSchema);
+const Experience = models.Experience || model<IExperience>("Experience", experienceSchema);
 export default Experience;

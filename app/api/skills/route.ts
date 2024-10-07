@@ -21,6 +21,7 @@ export async function GET() {
 export async function POST(req: Request) {
   await dbConnect();
   const { name, url } = await req.json();
+
   try {
     const newSkill = await Skill.create({ name, url });
     return NextResponse.json({ success: true, data: newSkill });
