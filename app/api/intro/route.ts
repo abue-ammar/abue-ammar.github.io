@@ -32,11 +32,11 @@ export async function PUT(req: Request) {
     );
   }
 
-  const { title, desc } = await req.json();
+  const { title, desc, avatar } = await req.json();
   try {
     const updatedIntro = await Intro.findOneAndUpdate(
       {},
-      { title, desc },
+      { title, desc,avatar },
       { new: true, upsert: true }
     );
     return NextResponse.json({ success: true, data: updatedIntro });
