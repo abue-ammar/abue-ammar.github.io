@@ -30,7 +30,10 @@ const handler = NextAuth({
         }
 
         // Verify password (using bcrypt, for example)
-        const isValid = await verifyPassword(credentials.password, user.password);
+        const isValid = await verifyPassword(
+          credentials.password,
+          user.password
+        );
         if (!isValid) {
           throw new Error("Invalid password");
         }
@@ -60,7 +63,7 @@ const handler = NextAuth({
       return session;
     },
   },
-  secret: process.env.JWT_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,
 });
 
 export { handler as GET, handler as POST };
