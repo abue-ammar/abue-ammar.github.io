@@ -3,15 +3,8 @@
 import { apiFetcher } from "@/utils/apiFetcher";
 import useSWR from "swr";
 import Section from "./Section";
+import { IProject } from "@/app/api/models/Projects";
 
-interface IProject {
-  title: string;
-  description: string;
-  link?: string;
-  github?: string;
-  image?: string;
-  techs: string;
-}
 
 interface ProjectsProps {}
 
