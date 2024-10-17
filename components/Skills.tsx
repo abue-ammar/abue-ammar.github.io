@@ -23,7 +23,7 @@ const Skills: React.FC<SkillsProps> = () => {
   if (isLoading) {
     return (
       <div>
-        <Section title="Skills" />
+          <div className="bg-gray-200 h-8 w-32 mb-2 rounded-md"></div>
         <div className="flex flex-wrap gap-2">
           {[...Array(7)].map((_, i) => (
             <div

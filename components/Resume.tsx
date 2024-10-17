@@ -16,7 +16,7 @@ const Resume: React.FC = () => {
     return (
       <div className="">
         {/* Skeleton for Section title */}
-        <Section title="Resume" />
+        <div className="bg-gray-200 h-8 w-36 mb-2 rounded-md"></div>
 
         <div className="mb-2">
           <div className="bg-gray-200 h-4 w-72 rounded animate-pulse mb-4"></div>

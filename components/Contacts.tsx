@@ -1,16 +1,51 @@
-import { contact } from "@/app/data";
-import React from "react";
+"use client";
+import { apiFetcher } from "@/utils/apiFetcher";
+import useSWR from "swr";
 import Section from "./Section";
+
+interface IContact {
+  github: string;
+  mail: string;
+  linkedin: string;
+  phone: string;
+}
 
 interface ContactsProps {}
 
-const Contacts: React.FC<ContactsProps> = (props) => {
+const Contacts: React.FC<ContactsProps> = () => {
+  const { data, error } = useSWR<{ success: boolean; data: IContact }>(
+    "/api/contact",
+    apiFetcher
+  );
+
+  const isLoading = !data && !error;
+
+  if (isLoading) {
+    return (
+      <div>
+        <div className="bg-gray-200 h-8 w-40 mb-2 rounded-md"></div>
+        <div className="animate-pulse">
+          <div className="bg-gray-200 h-4 w-48 mb-2 rounded-md"></div>
+          <div className="bg-gray-200 h-4 w-32 mb-2 rounded-md"></div>
+          <div className="bg-gray-200 h-4 w-40 mb-2 rounded-md"></div>
+          <div className="bg-gray-200 h-4 w-56 mb-2 rounded-md"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return <div>Error loading contact information: {error.message}</div>;
+  }
+
+  const contact = data?.data;
+
   return (
     <div>
-      <Section title={contact.title} />
-      <div className=" flex flex-col gap-1">
-        {contact.mail && (
-          <div className=" text-black dark:text-white flex items-center">
+      <Section title="Contact" />
+      <div className="flex flex-col gap-1">
+        {contact?.mail && (
+          <div className="text-black dark:text-white flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -28,15 +63,16 @@ const Contacts: React.FC<ContactsProps> = (props) => {
             </svg>
             <a
               className="text-black dark:text-white"
-              href={`mailto:${contact.mail}`}
+              href={`mailto:${contact?.mail}`}
               rel="noreferrer"
             >
-              {contact.mail}
+              {contact?.mail}
             </a>
           </div>
         )}
-        {contact.phone && (
-          <div className=" text-black dark:text-white flex items-center">
+
+        {contact?.phone && (
+          <div className="text-black dark:text-white flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -54,15 +90,16 @@ const Contacts: React.FC<ContactsProps> = (props) => {
             </svg>
             <a
               className="text-black dark:text-white"
-              href={`tel:${contact.phone}`}
+              href={`tel:${contact?.phone}`}
               rel="noreferrer"
             >
-              {contact.phone}
+              {contact?.phone}
             </a>
           </div>
         )}
-        {contact.github && (
-          <div className=" text-black dark:text-white flex items-center">
+
+        {contact?.github && (
+          <div className="text-black dark:text-white flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -80,15 +117,16 @@ const Contacts: React.FC<ContactsProps> = (props) => {
             </svg>
             <a
               className="text-black dark:text-white"
-              href={`https://github.com/${contact.github}`}
+              href={`https://github.com/${contact?.github}`}
               target="_blank"
               rel="noreferrer"
             >
-              github.com/{contact.github}
+              github.com/{contact?.github}
             </a>
           </div>
         )}
-        {contact.linkedin && (
+
+        {contact?.linkedin && (
           <div className="text-black dark:text-white flex items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -108,11 +146,11 @@ const Contacts: React.FC<ContactsProps> = (props) => {
             </svg>
             <a
               className="text-black dark:text-white"
-              href={`https://linkedin.com/in/${contact.linkedin}`}
+              href={`https://linkedin.com/in/${contact?.linkedin}`}
               target="_blank"
               rel="noreferrer"
             >
-              linkedin.com/in/{contact.linkedin}
+              linkedin.com/in/{contact?.linkedin}
             </a>
           </div>
         )}

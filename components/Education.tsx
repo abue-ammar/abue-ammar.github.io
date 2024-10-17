@@ -17,7 +17,7 @@ const Education: React.FC<EducationProps> = () => {
   if (isLoading) {
     return (
       <div>
-        <Section title="Education" />
+      <div className="bg-gray-200 h-8 w-48 mb-2 rounded-md"></div>
         <div className="flex flex-col gap-2">
           {[...Array(3)].map((_, i) => (
             <div key={i} className="animate-pulse">

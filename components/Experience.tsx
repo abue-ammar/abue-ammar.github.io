@@ -17,13 +17,13 @@ const Experience: React.FC<ExperienceProps> = () => {
   if (isLoading) {
     return (
       <div>
-        <Section title="Experience" />
+        <div className="bg-gray-200 h-8 w-48 mb-2 rounded-md"></div>
         <div className="flex flex-col gap-4">
           {/* Skeleton for Experience items */}
           {[...Array(3)].map((_, i) => (
             <div key={i} className="">
               {/* Skeleton for company name */}
-              <div className="bg-gray-200 h-6 w-48 rounded-md animate-pulse mb-2"></div>
+              <div className="bg-gray-200 h-6 w-80 rounded-md animate-pulse mb-2"></div>
 
               {/* Skeleton for position and duration */}
               <div className="bg-gray-200 h-4 w-64 rounded-md animate-pulse mb-2"></div>

@@ -1,10 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import { IProject } from "@/app/api/models/Projects";
 import { apiFetcher } from "@/utils/apiFetcher";
 import useSWR from "swr";
 import Section from "./Section";
-import { IProject } from "@/app/api/models/Projects";
-
 
 interface ProjectsProps {}
 
@@ -19,7 +18,7 @@ const Projects: React.FC<ProjectsProps> = () => {
   if (isLoading) {
     return (
       <div>
-        <Section title="Projects" />
+        <div className="bg-gray-200 h-8 w-40 mb-2 rounded-md"></div>
         {/* Skeleton Loader */}
         <div className="mt-4 flex flex-col gap-4">
           {[...Array(3)].map((_, index) => (
