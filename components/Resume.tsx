@@ -1,20 +1,50 @@
-import { resume } from "@/app/data";
-import React from "react";
+"use client";
+import { IResume } from "@/app/api/models/Resume";
+import useSWR from "swr";
+
+import { apiFetcher } from "@/utils/apiFetcher";
 import Section from "./Section";
 
-interface ResumeProps {}
+const Resume: React.FC = () => {
+  const { data, error } = useSWR<{ success: boolean; data: IResume }>(
+    "/api/resume",
+    apiFetcher
+  );
 
-const Resume: React.FC<ResumeProps> = (props) => {
+  const isLoading = !data && !error;
+  if (isLoading) {
+    return (
+      <div className="mt-4">
+        {/* Skeleton for Section title */}
+        <div className="bg-gray-200 h-8 w-48 rounded animate-pulse mb-2"></div>
+
+        <div className="mb-2">
+          <div className="bg-gray-200 h-4 w-72 rounded animate-pulse mb-4"></div>
+        </div>
+
+        <div className="flex items-center gap-2">
+          {/* Skeleton for download button */}
+          <div className="bg-gray-200 h-8 w-32 rounded animate-pulse"></div>
+
+          {/* Skeleton for preview button */}
+          <div className="bg-gray-200 h-8 w-32 rounded animate-pulse"></div>
+        </div>
+      </div>
+    );
+  }
+
+  const resumeData = data?.data;
+
   return (
     <div>
-      <Section title={resume.title} />
-      <p className="mb-2">Here you can find my resume. </p>
+      <Section title={resumeData?.title || ""} />
+      <p className="mb-2">{resumeData?.description}</p>
       <div className="flex items-center gap-2">
         <div className="flex items-center">
           <a
-            href={resume.download}
+            href={resumeData?.download}
             rel="noreferrer"
-            className=" tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black  dark:border-white border border-black dark:text-white inline-flex items-center text-sm py-0.5  px-2"
+            className="tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black dark:border-white border border-black dark:text-white inline-flex items-center text-sm py-0.5 px-2"
           >
             Download
             <svg
@@ -37,10 +67,10 @@ const Resume: React.FC<ResumeProps> = (props) => {
         </div>
         <div className="flex items-center">
           <a
-            href={resume.link}
+            href={resumeData?.link}
             target="_blank"
             rel="noreferrer"
-            className="tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black text-sm dark:border-white border border-black dark:text-white inline-flex items-center  py-0.5 px-2"
+            className="tracking-wide transition duration-200 rounded-lg hover:bg-neutral-900 focus:shadow-outline focus:outline-none bg-black justify-center text-white dark:hover:bg-white dark:hover:text-black text-sm dark:border-white border border-black dark:text-white inline-flex items-center py-0.5 px-2"
           >
             Preview
             <svg
