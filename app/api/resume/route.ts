@@ -33,11 +33,11 @@ export async function PUT(req: Request) {
       { status: 401 }
     );
   }
-  const { title, description, link, download } = await req.json();
+  const { description, link, download } = await req.json();
   try {
     const updatedResume = await Resume.findOneAndUpdate(
       {},
-      { title, description, link, download },
+      { description, link, download },
       { new: true, upsert: true }
     );
     return NextResponse.json({ success: true, data: updatedResume });

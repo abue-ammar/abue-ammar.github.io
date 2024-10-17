@@ -14,9 +14,9 @@ const Resume: React.FC = () => {
   const isLoading = !data && !error;
   if (isLoading) {
     return (
-      <div className="mt-4">
+      <div className="">
         {/* Skeleton for Section title */}
-        <div className="bg-gray-200 h-8 w-48 rounded animate-pulse mb-2"></div>
+        <Section title="Resume" />
 
         <div className="mb-2">
           <div className="bg-gray-200 h-4 w-72 rounded animate-pulse mb-4"></div>
@@ -32,12 +32,15 @@ const Resume: React.FC = () => {
       </div>
     );
   }
+  if (error) {
+    return <div>Error loading experience data: {error.message}</div>;
+  }
 
   const resumeData = data?.data;
 
   return (
     <div>
-      <Section title={resumeData?.title || ""} />
+      <Section title={"Resume"} />
       <p className="mb-2">{resumeData?.description}</p>
       <div className="flex items-center gap-2">
         <div className="flex items-center">

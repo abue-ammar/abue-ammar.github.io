@@ -46,6 +46,8 @@ const Intro: React.FC = () => {
         <>
           <div className="h-4 bg-gray-200 animate-pulse rounded w-full mb-2" />
           <div className="h-4 bg-gray-200 animate-pulse rounded w-full mb-2" />
+          <div className="h-4 bg-gray-200 animate-pulse rounded w-full mb-2 md:hidden" />
+          <div className="h-4 bg-gray-200 animate-pulse rounded w-full mb-2 md:hidden" />
           <div className="h-4 bg-gray-200 animate-pulse rounded w-2/3 mb-2" />
         </>
       ) : (
