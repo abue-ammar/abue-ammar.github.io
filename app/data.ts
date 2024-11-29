@@ -176,7 +176,7 @@ export const skills = {
 
 export const resume = {
   title: "Resume",
-  link: "https://drive.google.com/file/d/1rkOb_LjZcZyOYY91d7axwON61EEZXW6Q/view",
+  link: "https://drive.google.com/file/d/10Cx8nuZpqDG43JWk0ZZ47ZNGvKQyqmRF/view",
   download:
     "https://github.com/abdarker/resume/raw/main/Abue%20Ammar's%20Resume.pdf",
 };
