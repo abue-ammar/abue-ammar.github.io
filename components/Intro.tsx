@@ -1,30 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
-import { intro } from "@/app/data";
-import Image from "next/image";
 import React from "react";
-import ToggleTheme from "./ToggleTheme";
 
-interface IntroProps {}
-
-const Intro: React.FC<IntroProps> = (props) => {
+const Intro: React.FC = () => {
   return (
-    <div className="mb-4">
-      <div className="flex items-center justify-between w-full">
-        <div className="w-20 h-20 rounded-full relative overflow-hidden">
-          <Image
-            src="/profile.png"
-            height={80}
-            width={80}
-            className="object-contain"
-            alt="Abue Ammar"
-          />
-        </div>
-        <div className="mb-4 mr-4">
-          <ToggleTheme />
-        </div>
-      </div>
-      <h1 className="my-4">{intro.title}</h1>
-      <p className="text-justify">{intro.desc}</p>
+    <div className="fade-in">
+      <p className="">
+        <strong className="font-semibold">Software Engineer</strong>. I enjoy
+        building robust, easy-to-use, digital products. I work at{" "}
+        <a href="https://technonext.com" target="_blank">
+          TechnoNext Ltd
+        </a>
+        . I value simplicity, usability and the intersection of technology.
+      </p>
+
+      <p className="mt-4 flex gap-x-3">
+        <a href="mailto:iabueammar@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/abdarker/" target="_blank">
+          LinkedIn
+        </a>
+        <a href="https://github.com/abdarker" target="_blank">
+          Github
+        </a>
+      </p>
     </div>
   );
 };

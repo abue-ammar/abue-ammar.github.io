@@ -1,16 +1,17 @@
-import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
-import Providers from "./Providers";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  manifest: "/manifest.json",
   title: "Abue Ammar",
-  description: "Abue Ammar's Portfolio.",
+  description: "The website and portfolio of Abue Ammar.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#FFFFFF",
+  themeColor: "#fff",
+  initialScale: 1,
+  width: "device-width",
+  userScalable: false,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
@@ -19,9 +20,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={GeistSans.className}>
-        <Providers> {children}</Providers>
+    <html lang="en">
+      <body className="m-auto max-w-[80ch] px-8 py-20 pb-40 font-normal text-black antialiased">
+        {children}
       </body>
     </html>
   );
