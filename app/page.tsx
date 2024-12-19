@@ -1,7 +1,19 @@
+import Header from "@/components/Header";
+import Intro from "@/components/Intro";
+import Projects from "@/components/Projects";
+import Resume from "@/components/Resume";
+import Skills from "@/components/Skills";
+
 export default function Home() {
   return (
-    <div className="bg-red-400 underline">
-      <h1>Home</h1>
-    </div>
+    <>
+      <Header />
+      <main className="mt-8 space-y-12">
+        <Intro />
+        <Skills />
+        <Projects />
+        <Resume />
+      </main>
+    </>
   );
 }
