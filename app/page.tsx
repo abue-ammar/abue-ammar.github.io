@@ -11,8 +11,8 @@ export default function Home() {
       <main className="mt-8 space-y-12">
         <Intro />
         <Skills />
-        <Projects />
         <Resume />
+        <Projects />
       </main>
     </>
   );
