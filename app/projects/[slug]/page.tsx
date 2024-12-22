@@ -4,7 +4,7 @@ type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {
   const { slug } = await params;
-  const projects = await import("../data/data").then((mod) => mod.projects);
+  const projects = await import("../../data/data").then((mod) => mod.projects);
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: Params }) {
 
 export default async function ProjectPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const projects = await import("../data/data").then((mod) => mod.projects);
+  const projects = await import("../../data/data").then((mod) => mod.projects);
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) {

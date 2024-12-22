@@ -9,7 +9,7 @@ const Projects: React.FC = () => {
         {projects.map((project) => (
           <li key={project.id}>
             <h3 className="mt-4">
-              <a href={project.slug}>{project.name}</a> →
+              <a href={`/projects/${project.slug}`}>{project.name}</a> →
             </h3>
             <p>{project.details}</p>
           </li>
