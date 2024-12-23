@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="m-auto max-w-[80ch] px-8 py-20 pb-40 font-normal text-black antialiased">
+      <body className="m-auto max-w-[80ch] px-8 py-20 font-normal text-black antialiased">
         {children}
       </body>
     </html>
