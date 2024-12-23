@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="mt-8 space-y-12">
+      <main className="mt-8 space-y-10">
         <Intro />
         <Contacts />
         <Skills />
