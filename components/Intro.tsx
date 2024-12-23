@@ -2,7 +2,7 @@ import React from "react";
 
 const Intro: React.FC = () => {
   return (
-    <div className="fade-in">
+    <section className="fade-in">
       <p className="">
         <strong className="font-semibold">Software Engineer</strong>. I enjoy
         building robust, easy-to-use, digital products. I work at{" "}
@@ -28,7 +28,7 @@ const Intro: React.FC = () => {
           download
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 

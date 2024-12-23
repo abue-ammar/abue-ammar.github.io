@@ -3,7 +3,7 @@ import React from "react";
 
 const Projects: React.FC = () => {
   return (
-    <div className="fade-in">
+    <section className="fade-in">
       <h2 className="font-bold">Projects</h2>
       <ul>
         {projects.map((project) => (
@@ -56,7 +56,7 @@ const Projects: React.FC = () => {
           </svg>
         </a>
       </p>
-    </div>
+    </section>
   );
 };
 

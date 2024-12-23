@@ -2,7 +2,7 @@ import React from "react";
 
 const Contacts: React.FC = () => {
   return (
-    <div className="fade-in">
+    <section className="fade-in">
       <h2 className="font-bold">Get In Touch</h2>
 
       <div className="mt-4 flex items-center gap-x-4">
@@ -92,7 +92,7 @@ const Contacts: React.FC = () => {
           </svg>
         </a>
       </div>
-    </div>
+    </section>
   );
 };
 

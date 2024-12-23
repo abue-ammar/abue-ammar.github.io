@@ -35,12 +35,19 @@ export default async function ProjectPage({ params }: { params: Params }) {
   }
 
   return (
-    <div>
-      <h1>{project.name}</h1>
-      <p>{project.details}</p>
-      <Link href={project.link} target="_blank" rel="noopener noreferrer">
-        Visit Project
-      </Link>
-    </div>
+    <article>
+      <div className="mb-8 flex justify-between">
+        <Link href="/" className="">
+          Back To Home
+        </Link>
+      </div>
+      <div className="fade-in">
+        <h1 className="text-lg font-semibold">{project.name}</h1>
+        <p>{project.details}</p>
+        <Link href={project.link} target="_blank" rel="noopener noreferrer">
+          Visit Project
+        </Link>
+      </div>
+    </article>
   );
 }

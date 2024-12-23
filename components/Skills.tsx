@@ -2,7 +2,7 @@ import React from "react";
 
 const Skills: React.FC = () => {
   return (
-    <div className="fade-in">
+    <section className="fade-in">
       <h2 className="font-bold">Stack</h2>
       <ul>
         <li>
@@ -305,7 +305,7 @@ const Skills: React.FC = () => {
           </div>
         </li>
       </ul>
-    </div>
+    </section>
   );
 };
 
