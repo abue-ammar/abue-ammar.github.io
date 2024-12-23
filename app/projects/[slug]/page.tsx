@@ -1,5 +1,11 @@
 import Link from "next/link";
+export async function generateStaticParams() {
+  const projects = await import("../../data/data").then((mod) => mod.projects);
 
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
 type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }) {
