@@ -1,9 +1,17 @@
 import Link from "next/link";
 
-type Params = Promise<{ slug: string }>;
+export async function generateStaticParams() {
+  const projects = await import("../../data/data").then((mod) => mod.projects);
+
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+type Params = { slug: string };
 
 export async function generateMetadata({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug } = params;
   const projects = await import("../../data/data").then((mod) => mod.projects);
   const project = projects.find((p) => p.slug === slug);
 
@@ -20,8 +28,9 @@ export async function generateMetadata({ params }: { params: Params }) {
   };
 }
 
+// Main component
 export default async function ProjectPage({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug } = params;
   const projects = await import("../../data/data").then((mod) => mod.projects);
   const project = projects.find((p) => p.slug === slug);
 
