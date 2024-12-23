@@ -1,52 +1,62 @@
+import { projects } from "@/app/data/data";
 import React from "react";
 
 const Projects: React.FC = () => {
   return (
-    <div className="fade-in">
+    <section className="fade-in">
       <h2 className="font-bold">Projects</h2>
       <ul>
-        <li>
-          <h3 className="mt-4">
-            <a href="https://usbair.com/">US-Bangla Airlines Website & CMS</a> →
-          </h3>
-          <p>Built US-Bangla Airlines corporate site and content management.</p>
-        </li>
-        <li>
-          <h3 className="mt-4">
-            <a href="">US-Bangla Payment Gateway</a> →
-          </h3>
-          <p>
-            Developed Payment Gateway system serving US-Bangla partnered
-            companies.
-          </p>
-        </li>
-        <li>
-          <h3 className="mt-4">
-            <a href="https://www.rtvonline.com/">RTV News & CMS</a> →
-          </h3>
-          <p>
-            Developed CMS with features like Page Builder, Template
-            Customization, and a Rich Text Editor for content creation.
-          </p>
-        </li>
-        <li>
-          <h3 className="mt-4">
-            <a href="https://dhakamail.com/">DhakaMail News & CMS</a> →
-          </h3>
-          <p>Built a powerful CMS for managing news, roles, templates etc.</p>
-        </li>
+        {projects.map((project) => (
+          <li key={project.id}>
+            <h3 className="mt-4">
+              <a
+                href={`/projects/${project.slug}`}
+                className="group inline-flex items-center"
+              >
+                <span className="">{project.name}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="duration-400 ml-1.5 size-4 transition-transform ease-out group-hover:translate-x-1"
+                >
+                  <path d="M18 8L22 12L18 16" />
+                  <path d="M2 12H22" />
+                </svg>
+              </a>
+            </h3>
+            <p>{project.details}</p>
+          </li>
+        ))}
       </ul>
       <p className="mt-4">
         <a
           href="https://github.com/abdarker?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
+          className="group inline-flex items-center"
         >
           More Projects
-        </a>{" "}
-        →
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.3"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="duration-400 ml-1.5 size-4 transition-transform ease-out group-hover:translate-x-1"
+          >
+            <path d="M18 8L22 12L18 16" />
+            <path d="M2 12H22" />
+          </svg>
+        </a>
       </p>
-    </div>
+    </section>
   );
 };
 
