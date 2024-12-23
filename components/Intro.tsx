@@ -12,13 +12,20 @@ const Intro: React.FC = () => {
         . I value simplicity, usability and the intersection of technology.
       </p>
 
-      <p className="mt-4 flex gap-x-3">
-        <a href="mailto:iabueammar@gmail.com">Email</a>
-        <a href="https://www.linkedin.com/in/abdarker/" target="_blank">
-          LinkedIn
-        </a>
-        <a href="https://github.com/abdarker" target="_blank">
-          Github
+      <p className="mt-4">
+        Resumé{" "}
+        <a
+          href="https://drive.google.com/file/d/10Cx8nuZpqDG43JWk0ZZ47ZNGvKQyqmRF/view"
+          target="_blank"
+        >
+          preview
+        </a>{" "}
+        or{" "}
+        <a
+          href="https://github.com/abdarker/resume/raw/main/Abue%20Ammar's%20Resume.pdf"
+          target="_blank"
+        >
+          download
         </a>
       </p>
     </div>
