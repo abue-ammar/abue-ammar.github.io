@@ -47,7 +47,7 @@ export default async function ProjectPage({
 
   return (
     <article>
-      <div className="mb-8 flex justify-between">
+      <div className="mb-6">
         <Link
           href="/"
           className="inline-flex items-center rounded-lg bg-neutral-100 px-2 py-1 font-[400] no-underline"
@@ -66,7 +66,7 @@ export default async function ProjectPage({
         </Link>
       </div>
       <div className="fade-in">
-        <h1 className="mb-4 text-2xl font-semibold">{project.name}</h1>
+        <h1 className="mb-2 text-2xl font-semibold">{project.name}</h1>
 
         <div className="mb-4">
           <h2 className="text-lg font-medium text-neutral-700">Technologies</h2>
