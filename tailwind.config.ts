@@ -13,15 +13,6 @@ export default {
       },
       colors: { black: "#222222", "dark-grey": "#303030", blue: "#2357cd" },
     },
-    fontFamily: {
-      sans: [
-        "-apple-system",
-        "BlinkMacSystemFont",
-        "Helvetica Neue",
-        "Segoe UI",
-        "sans-serif",
-      ],
-    },
   },
   plugins: [],
 } satisfies Config;
