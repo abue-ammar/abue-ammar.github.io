@@ -1,4 +1,5 @@
 import { projects } from "@/app/data/data";
+import Link from "next/link";
 import React from "react";
 
 const Projects: React.FC = () => {
@@ -9,11 +10,12 @@ const Projects: React.FC = () => {
         {projects.map((project) => (
           <li key={project.id}>
             <h3 className="mt-4">
-              <a
+              <Link
                 href={`/projects/${project.slug}`}
                 className="group inline-flex items-center"
+                prefetch={true}
               >
-                <span className="">{project.name}</span>
+                {project.name}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -27,14 +29,14 @@ const Projects: React.FC = () => {
                   <path d="M18 8L22 12L18 16" />
                   <path d="M2 12H22" />
                 </svg>
-              </a>
+              </Link>
             </h3>
-            <p>{project.details}</p>
+            <p>{project.shortDescription}</p>
           </li>
         ))}
       </ul>
       <p className="mt-4">
-        <a
+        <Link
           href="https://github.com/abdarker?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
@@ -54,7 +56,7 @@ const Projects: React.FC = () => {
             <path d="M18 8L22 12L18 16" />
             <path d="M2 12H22" />
           </svg>
-        </a>
+        </Link>
       </p>
     </section>
   );
