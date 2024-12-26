@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  @apply underline
+  @apply underline;
 }
 
 .fade-in {
