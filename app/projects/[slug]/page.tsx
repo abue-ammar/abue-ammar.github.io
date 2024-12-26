@@ -24,7 +24,7 @@ export async function generateMetadata({
 
   return {
     title: project.name,
-    description: project.details,
+    description: project.shortDescription,
   };
 }
 
@@ -66,11 +66,44 @@ export default async function ProjectPage({
         </Link>
       </div>
       <div className="fade-in">
-        <h1 className="text-lg font-semibold">{project.name}</h1>
-        <p>{project.details}</p>
-        <Link href={project.link} target="_blank" rel="noopener noreferrer">
-          Visit Project
-        </Link>
+        <h1 className="mb-4 text-2xl font-semibold">{project.name}</h1>
+
+        <div className="mb-4">
+          <h2 className="text-lg font-medium text-neutral-700">Technologies</h2>
+          <p className="text-sm text-neutral-600">{project.technologies}</p>
+        </div>
+
+        <ul className="list-disc pl-6 text-gray-700">
+          {project.description.map((description, index) => (
+            <li key={index} className="mb-2">
+              {description}
+            </li>
+          ))}
+        </ul>
+
+        {project.link && (
+          <Link
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center"
+          >
+            Visit Project
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="ml-1 size-4"
+            >
+              <path d="M7 7h10v10" />
+              <path d="M7 17 17 7" />
+            </svg>
+          </Link>
+        )}
       </div>
     </article>
   );

@@ -31,7 +31,7 @@ const Projects: React.FC = () => {
                 </svg>
               </Link>
             </h3>
-            <p>{project.details}</p>
+            <p>{project.shortDescription}</p>
           </li>
         ))}
       </ul>
