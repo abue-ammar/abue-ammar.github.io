@@ -8,7 +8,7 @@ const Contacts: React.FC = () => {
 
       <div className="mt-4 flex items-center gap-x-4">
         <Link
-          href="mailto:iabueammar@gmail"
+          href="mailto:iabueammar@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Email"
