@@ -22,7 +22,7 @@ const Intro: React.FC = () => {
         </a>{" "}
         or{" "}
         <a
-          href="https://github.com/abdarker/resume/raw/main/Abue%20Ammar's%20Resume.pdf"
+          href="https://github.com/abue-ammar/resume/raw/main/Abue%20Ammar's%20Resume.pdf"
           target="_blank"
         >
           download
