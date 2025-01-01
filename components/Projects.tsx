@@ -37,7 +37,7 @@ const Projects: React.FC = () => {
       </ul>
       <p className="mt-4">
         <Link
-          href="https://github.com/abdarker?tab=repositories"
+          href="https://github.com/abue-ammar?tab=repositories"
           target="_blank"
           rel="noopener noreferrer"
           className="group inline-flex items-center"

@@ -28,7 +28,7 @@ const Contacts: React.FC = () => {
           </svg>
         </Link>
         <Link
-          href="https://github.com/abdarker"
+          href="https://github.com/abue-ammar"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="GitHub"
@@ -48,7 +48,7 @@ const Contacts: React.FC = () => {
           </svg>
         </Link>
         <Link
-          href="http://linkedin.com/in/abdarker"
+          href="http://linkedin.com/in/abue-ammar"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="LinkedIn"
