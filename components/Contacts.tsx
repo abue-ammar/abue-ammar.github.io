@@ -70,7 +70,7 @@ const Contacts: React.FC = () => {
         </Link>
 
         <Link
-          href="https://x.com/AmmarAbue"
+          href="https://x.com/abue_ammar"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="X"
