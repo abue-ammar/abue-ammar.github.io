@@ -1,7 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@import "tailwindcss";
 html,
 body {
   overscroll-behavior: none;
@@ -9,6 +6,10 @@ body {
   -webkit-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
+}
+@theme {
+  --color-black: #222222;
+  --font-weight-normal: 300;
 }
 a {
   @apply underline;
