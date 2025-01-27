@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
                   strokeWidth="1.3"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="duration-400 ml-1.5 size-4 transition-transform ease-out group-hover:translate-x-1"
+                  className="ml-1.5 size-4 transition-transform duration-400 ease-out group-hover:translate-x-1"
                 >
                   <path d="M18 8L22 12L18 16" />
                   <path d="M2 12H22" />
@@ -51,7 +51,7 @@ const Projects: React.FC = () => {
             strokeWidth="1.3"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="duration-400 ml-1.5 size-4 transition-transform ease-out group-hover:translate-x-1"
+            className="ml-1.5 size-4 transition-transform duration-400 ease-out group-hover:translate-x-1"
           >
             <path d="M18 8L22 12L18 16" />
             <path d="M2 12H22" />
