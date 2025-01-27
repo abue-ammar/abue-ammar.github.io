@@ -50,7 +50,7 @@ export default async function ProjectPage({
       <div className="mb-6">
         <Link
           href="/"
-          className="inline-flex items-center rounded-lg bg-neutral-100 px-2 py-1 no-underline"
+          className="inline-flex items-center rounded-lg bg-neutral-100 px-2 py-1 !no-underline"
           aria-label="home"
         >
           <svg
