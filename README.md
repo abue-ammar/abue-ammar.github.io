@@ -52,12 +52,6 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 ├─ package-lock.json
 ├─ package.json
 ├─ postcss.config.mjs
-├─ public
-│  ├─ file.svg
-│  ├─ globe.svg
-│  ├─ next.svg
-│  ├─ vercel.svg
-│  └─ window.svg
 └─ tsconfig.json
 ```
 
